@@ -3,7 +3,7 @@
 
 #array dimensions
 d = 1.0#distance between sites MUST BE 1.0!!!!!!
-N_atoms = 2#number of atoms
+N_atoms = 25#number of atoms
 borde = 3
 wide = 3
 layers = 1
