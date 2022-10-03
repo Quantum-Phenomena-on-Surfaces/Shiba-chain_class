@@ -32,6 +32,13 @@ def plot_2D(z, z_z, z_x, energy, e, e_z, e_x, vv, N_x):
     ax3.title.set_text(r'$\rho_{x}$')
     fig.colorbar(im3, ax=ax3, orientation='horizontal')
     
+    #save Fig   
+    plt.savefig('2D_map_z.png')
+    
+    #savedata
+    np.savetxt('z_total.txt', z/eV)
+    np.savetxt('z_z.txt', z_z/eV)
+    np.savetxt('z_x.txt', z_x/eV)
     
     fig2 = plt.figure(3)
     ax1 = fig2.add_subplot(131)
@@ -54,4 +61,10 @@ def plot_2D(z, z_z, z_x, energy, e, e_z, e_x, vv, N_x):
     ax3.set_xlabel('Energy (meV)')
     cb3.set_label(r'$\rho_{x}$')
     
+    #save Fig   
+    plt.savefig('2D_map_zepng')
     
+    #savedata
+    np.savetxt('e_total.txt', e/eV)
+    np.savetxt('e_z.txt', e_z/eV)
+    np.savetxt('e_x.txt', e_x/eV)    

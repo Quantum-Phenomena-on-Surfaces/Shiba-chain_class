@@ -34,7 +34,13 @@ def plot_spectra(vv, spect_atom, spect_atom_up, spect_atom_dn, profile, energy):
     ax2.set_ylabel('Profile at E = %f meV along x' %energy)
     ax2.set_xlabel('Atomic site')
     
-    #save data
+    #save Fig   
+    plt.savefig('spectra_profile.png')
     
-    #plt.savefig('spectrum.png')
+    #save data
+    np.savetxt('spect_total.txt', spect_atom/eV)
+    np.savetxt('spect_up.txt', spect_atom_up/eV)
+    np.savetxt('spect_down.txt', spect_atom_dn/eV)
+    np.savetxt('vv.txt', vv)
+    
     

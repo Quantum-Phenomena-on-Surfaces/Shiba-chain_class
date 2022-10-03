@@ -14,11 +14,15 @@ import Spin_chain_class as clas
 '''init class with total G calculation'''
 Chain = clas.Shiba_chain()
 
+
 '''Calculate spectra everywere in the array'''
 Chain.spectra_calc()
 
 '''Select spectrum we want to plot'''#eg. [i,j] = [row, borde]
 Chain.select_spectra(Chain.row, Chain.borde)
+
+#print("{:.8f}".format(Chain.peaks))
+pp = Chain.peaks
 
 '''plot spectra'''
 import plot_spectra as ps
