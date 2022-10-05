@@ -41,6 +41,7 @@ def plot_spectra(vv, spect_atom, spect_atom_up, spect_atom_dn, profile, energy):
     np.savetxt('spect_total.txt', spect_atom/eV)
     np.savetxt('spect_up.txt', spect_atom_up/eV)
     np.savetxt('spect_down.txt', spect_atom_dn/eV)
+    np.savetxt('profile.txt', profile/eV)
     np.savetxt('vv.txt', vv)
     
     

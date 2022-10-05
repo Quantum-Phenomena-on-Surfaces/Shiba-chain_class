@@ -15,7 +15,7 @@ from scipy.sparse import lil_matrix
 
 #Local self-energy for exchange and SOC
 
-def Self_Energy(J, S, thetaS, phi, U, N_atoms, N_x, N_y, layers, borde, lamda):
+def Self_Energy(JJ, S, thetaS, phi, UU, N_atoms, N_x, N_y, layers, borde, lamda):
     
      Self = np.zeros([N_y * N_x * layers, N_y * N_x * layers, 4, 4], dtype=complex)
      Self2 = np.zeros([N_y * N_x * layers * 4, N_y * N_x * layers * 4], dtype=complex)
@@ -31,7 +31,8 @@ def Self_Energy(J, S, thetaS, phi, U, N_atoms, N_x, N_y, layers, borde, lamda):
          #g_i = int(N_y/2.0) * N_x + (2*i_atom + borde)##### d=2a
          theta_i = thetaS[i_atom]
          phi_i = phi[i_atom]
-         
+         J = JJ[i_atom]
+         U = UU[i_atom]
          
          Self [g_i, g_i, 0, 0]= J*S*cos(theta_i)-U
          Self [g_i, g_i, 1, 1]= - J*S*cos(theta_i)-U

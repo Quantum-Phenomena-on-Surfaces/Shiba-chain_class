@@ -39,8 +39,8 @@ class Shiba_chain:
         state = p.state#spin state
         N_period = p.N_period#spin helix 2=AFM
         k_F = p.k_F
-        U = p.U#%potential scatt#
-        J = p.j#magnetic coupling
+        u = p.U#%potential scatt#
+        j = p.j#magnetic coupling
         DOS_o = p.DOS
         s = p.s
         Delta = p.delta
@@ -54,8 +54,8 @@ class Shiba_chain:
         '''Asign all parameters'''
         self.a_interatomic = a_interatomic
         self.k_F = k_F
-        self.U = U
-        self.j = J
+        #self.U = U
+        #self.j = J
         self.delta = Delta
         self.dynes = Dynes
         self.rashba = alpha
@@ -73,7 +73,18 @@ class Shiba_chain:
         self.N_y = N_y
         self.row = row
         self.medio = medio
-    
+        
+        '''J vector'''
+        J = np.zeros(N_atoms, dtype = float)
+        J[::1] = j
+        
+        '''U vector'''
+        U = np.zeros(N_atoms, dtype = float)
+        U[::1] = u
+        
+        self.J = J
+        self.U = U
+        
         "Spin arragement"
         S = s
         N_periodicty = N_period   
