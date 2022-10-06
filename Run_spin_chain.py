@@ -36,4 +36,4 @@ Chain.maps_2D(Chain.ind)
 import plot_2D as p2
 p2.plot_2D(Chain.z, Chain.z_z, Chain.z_x, Chain.energy, Chain.e, Chain.e_z, Chain.e_x, Chain.vv, Chain.N_x)
 
-#z = Chain.z
+print(Chain.peaks)
