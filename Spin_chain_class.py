@@ -76,11 +76,11 @@ class Shiba_chain:
         
         '''J vector'''
         J = np.zeros(N_atoms, dtype = float)
-        J[::1] = j
+        J[::2] = j
         
         '''U vector'''
         U = np.zeros(N_atoms, dtype = float)
-        U[::1] = u
+        U[::2] = u
         
         self.J = J
         self.U = U
