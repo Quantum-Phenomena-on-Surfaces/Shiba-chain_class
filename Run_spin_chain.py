@@ -21,8 +21,6 @@ Chain.spectra_calc()
 '''Select spectrum we want to plot'''#eg. [i,j] = [row, borde]
 Chain.select_spectra(Chain.row, Chain.borde)
 
-#print("{:.8f}".format(Chain.peaks))
-pp = Chain.peaks
 
 '''plot spectra'''
 import plot_spectra as ps
@@ -35,5 +33,3 @@ Chain.maps_2D(Chain.ind)
 '''2-D plots'''
 import plot_2D as p2
 p2.plot_2D(Chain.z, Chain.z_z, Chain.z_x, Chain.energy, Chain.e, Chain.e_z, Chain.e_x, Chain.vv, Chain.N_x)
-
-#print(Chain.peaks)
